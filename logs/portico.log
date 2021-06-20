@@ -319,3 +319,156 @@ org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: Exa
 	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:244)
 ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
 ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.client.ClientFederate.runFederate(ClientFederate.java:30)
+	at hla13.producerConsumer.client.ClientFederate.main(ClientFederate.java:172)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [ClientFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [ClientFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.client.ClientFederate.runFederate(ClientFederate.java:30)
+	at hla13.producerConsumer.client.ClientFederate.main(ClientFederate.java:172)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [ClientFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [ClientFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:33)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.runFederate(CashRegisterFederate.java:35)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.main(CashRegisterFederate.java:247)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashRegisterFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashRegisterFederate]: label already registered
+ERROR [main] portico.lrc: Time [6.007321770457727] has already passed (lbts:11.0)
+org.portico.lrc.compat.JInvalidFederationTime: Time [6.007321770457727] has already passed (lbts:11.0)
+	at org.portico.lrc.LRCState.checkValidTime(LRCState.java:349)
+	at org.portico.lrc.services.object.handlers.outgoing.SendInteractionHandler.process(SendInteractionHandler.java:82)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.sendInteraction(Rti13Ambassador.java:2127)
+	at hla13.producerConsumer.distributor.DistributorFederate.sendInteraction(DistributorFederate.java:113)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:87)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:244)
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.carWash.CarWashFederate.runFederate(CarWashFederate.java:33)
+	at hla13.producerConsumer.carWash.CarWashFederate.main(CarWashFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashWashFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashWashFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:33)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.runFederate(CashRegisterFederate.java:35)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.main(CashRegisterFederate.java:250)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashRegisterFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashRegisterFederate]: label already registered
+ERROR [main] portico.lrc: Time [10.931116103099988] has already passed (lbts:11.0)
+org.portico.lrc.compat.JInvalidFederationTime: Time [10.931116103099988] has already passed (lbts:11.0)
+	at org.portico.lrc.LRCState.checkValidTime(LRCState.java:349)
+	at org.portico.lrc.services.object.handlers.outgoing.SendInteractionHandler.process(SendInteractionHandler.java:82)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.sendInteraction(Rti13Ambassador.java:2127)
+	at hla13.producerConsumer.distributor.DistributorFederate.sendInteraction(DistributorFederate.java:113)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:87)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:244)
+ERROR [main] portico.lrc: Time [23.0] has already passed (lbts:33.0)
+org.portico.lrc.compat.JInvalidFederationTime: Time [23.0] has already passed (lbts:33.0)
+	at org.portico.lrc.LRCState.checkValidTime(LRCState.java:349)
+	at org.portico.lrc.services.object.handlers.outgoing.SendInteractionHandler.process(SendInteractionHandler.java:82)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.sendInteraction(Rti13Ambassador.java:2127)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.sendInteraction(CashRegisterFederate.java:120)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.runFederate(CashRegisterFederate.java:91)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.main(CashRegisterFederate.java:250)
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.carWash.CarWashFederate.runFederate(CarWashFederate.java:33)
+	at hla13.producerConsumer.carWash.CarWashFederate.main(CarWashFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashWashFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashWashFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:33)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.runFederate(CashRegisterFederate.java:35)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.main(CashRegisterFederate.java:250)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashRegisterFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashRegisterFederate]: label already registered

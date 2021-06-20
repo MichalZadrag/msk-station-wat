@@ -5,7 +5,6 @@ import hla.rti.*;
 import hla.rti.jlc.EncodingHelpers;
 import hla.rti.jlc.RtiFactoryFactory;
 import hla13.StaticVars;
-import hla13.producerConsumer.distributor.DistributorAmbassador;
 import hla13.producerConsumer.storage.ExternalEvent;
 import org.portico.impl.hla13.types.DoubleTime;
 import org.portico.impl.hla13.types.DoubleTimeInterval;
@@ -47,8 +46,8 @@ public class CarWashFederate {
         }
 
         fedamb = new CarWashAmbassador();
-        rtiamb.joinFederationExecution( "DistributorFederate", "ExampleFederation", fedamb );
-        log( "Joined Federation as DistributorFederate");
+        rtiamb.joinFederationExecution( "CashWashFederate", "ExampleFederation", fedamb );
+        log( "Joined Federation as CarWashFederate");
 
         rtiamb.registerFederationSynchronizationPoint( StaticVars.READY_TO_RUN, null );
 
@@ -70,7 +69,7 @@ public class CarWashFederate {
 
         publishAndSubscribe();
 
-        registerDistributorObject();
+        registerCarWashObject();
 
         while (fedamb.running) {
             double timeToAdvance = fedamb.federateTime + timeStep;
@@ -103,9 +102,9 @@ public class CarWashFederate {
         SuppliedParameters parameters =
                 RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
 
-        byte[] id = EncodingHelpers.encodeInt(getFromQueue());
+        byte[] id = EncodingHelpers.encodeInt(getFromQueue()); //TODO sprawdzać czy getFromQueue != -1 jak nie jest to nie wysyłać
 
-        int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.MoveToCashRegisterFromDistributor");
+        int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.MoveToCashRegisterFromCarWash");
         int idHandle = rtiamb.getParameterHandle( "id", interactionHandle );
 
         parameters.add(idHandle, id);
@@ -152,22 +151,22 @@ public class CarWashFederate {
         }
     }
 
-    private void registerDistributorObject() throws RTIexception {
-        int classHandle = rtiamb.getObjectClassHandle("ObjectRoot.Distributor");
-        this.distributorHlaHandle = rtiamb.registerObjectInstance(classHandle);
+    private void registerCarWashObject() throws RTIexception {
+        int classHandle = rtiamb.getObjectClassHandle("ObjectRoot.CarWash");
+        this.carWashHlaHandle = rtiamb.registerObjectInstance(classHandle);
     }
 
     private void updateHLAObject(double time) throws RTIexception{
         SuppliedAttributes attributes =
                 RtiFactoryFactory.getRtiFactory().createSuppliedAttributes();
 
-        int classHandle = rtiamb.getObjectClass(distributorHlaHandle);
+        int classHandle = rtiamb.getObjectClass(carWashHlaHandle);
         int queueHandle = rtiamb.getAttributeHandle( "queue", classHandle );
         byte[] queueValue = EncodingHelpers.encodeString(queue);
 
         attributes.add(queueHandle, queueValue);
         LogicalTime logicalTime = convertTime( time );
-        rtiamb.updateAttributeValues( distributorHlaHandle, attributes, "actualize queue".getBytes(), logicalTime );
+        rtiamb.updateAttributeValues( carWashHlaHandle, attributes, "actualize queue".getBytes(), logicalTime );
     }
 
     private void advanceTime( double timeToAdvance ) throws RTIexception {
@@ -183,7 +182,7 @@ public class CarWashFederate {
 
     private void publishAndSubscribe() throws RTIexception {
 
-        int classHandle = rtiamb.getObjectClassHandle("ObjectRoot.Distributor");
+        int classHandle = rtiamb.getObjectClassHandle("ObjectRoot.CarWash");
         int queueHandle    = rtiamb.getAttributeHandle( "queue", classHandle );
 
         AttributeHandleSet attributes =
@@ -192,12 +191,12 @@ public class CarWashFederate {
 
         rtiamb.publishObjectClass(classHandle, attributes);
 
-        int createClientHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.CreateClient" );
-        fedamb.createClientHandle = createClientHandle;
-        rtiamb.subscribeInteractionClass( createClientHandle );
+        int moveToCarWashHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCarWash" );
+        fedamb.moveToCarWashHandle = moveToCarWashHandle;
+        rtiamb.subscribeInteractionClass( moveToCarWashHandle );
 
-        int moveToCashRegisterFromDistributorHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCashRegisterFromDistributor" );
-        rtiamb.publishInteractionClass(moveToCashRegisterFromDistributorHandle);
+        int moveToCashRegisterFromCarWashHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCashRegisterFromCarWash" );
+        rtiamb.publishInteractionClass(moveToCashRegisterFromCarWashHandle);
     }
 
     private void enableTimePolicy() throws RTIexception
@@ -237,7 +236,7 @@ public class CarWashFederate {
 
     private void log( String message )
     {
-        System.out.println( "DistributorFederate   : " + message );
+        System.out.println( "CarWashFederate   : " + message );
     }
 
     public static void main(String[] args) {

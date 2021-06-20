@@ -35,7 +35,7 @@ public class CarWashAmbassador extends NullFederateAmbassador {
     protected boolean isReadyToRun       = false;
 
     protected boolean running 			 = true;
-    protected int createClientHandle = 0;
+    protected int moveToCarWashHandle = 0;
 
     protected ArrayList<ExternalEvent> externalEvents = new ArrayList<>();
 
@@ -114,12 +114,12 @@ public class CarWashAmbassador extends NullFederateAmbassador {
                                     EventRetractionHandle eventRetractionHandle )
     {
         StringBuilder builder = new StringBuilder( "Interaction Received:" );
-        if(interactionClass == createClientHandle) {
+        if(interactionClass == moveToCarWashHandle) {
             try {
                 int id = EncodingHelpers.decodeInt(theInteraction.getValue(0));
                 double time =  convertTime(theTime);
-                externalEvents.add(new ExternalEvent(id, ExternalEvent.EventType.CREATE_CLIENT , time));
-                builder.append("Create Client , time=" + time);
+                externalEvents.add(new ExternalEvent(id, ExternalEvent.EventType.MOVE_TO_CAR_WASH , time));
+                builder.append("Receive client in Car Wash , time=" + time);
                 builder.append(" id=").append(id);
                 builder.append( "\n" );
 

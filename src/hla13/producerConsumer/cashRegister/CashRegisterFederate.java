@@ -14,6 +14,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
+import java.util.Random;
 
 public class CashRegisterFederate {
 
@@ -92,9 +93,31 @@ public class CashRegisterFederate {
                 fedamb.federateTime = timeToAdvance;
             }
 
+            Random random = new Random();
+            if (random.nextInt(10) > 7) {
+                sendInteraction(fedamb.federateTime + fedamb.federateLookahead);
+            } else {
+                System.out.println("Opuszcza kolejkę " + getFromQueue());
+            }
+
             rtiamb.tick();
         }
 
+    }
+
+    private void sendInteraction(double timeStep) throws RTIexception {
+        SuppliedParameters parameters =
+                RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
+
+        byte[] id = EncodingHelpers.encodeInt(getFromQueue());
+
+        int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.MoveToCarWash");
+        int idHandle = rtiamb.getParameterHandle( "id", interactionHandle );
+
+        parameters.add(idHandle, id);
+
+        LogicalTime time = convertTime( timeStep );
+        rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );
     }
 
     public void addToQueue(int id) {
@@ -103,11 +126,14 @@ public class CashRegisterFederate {
     }
 
     private int getFromQueue() {
-
-        if(this.queue.split("#").length < 0) {
+        if(this.queue.split("#").length == 1) {
             log("Empty queue");
-        }
-        else {
+        } else if (this.queue.split("#").length == 2) {
+            int id = Integer.parseInt(this.queue.split("#")[1]);
+            this.queue = "";
+            log("Removed "+ id + " at time: "+ fedamb.federateTime +", current queue: " + this.queue);
+            return id;
+        } else {
             int id = Integer.parseInt(this.queue.split("#")[1]);
             this.queue = this.queue.substring(this.queue.indexOf("#", 1));
             log("Removed "+ id + " at time: "+ fedamb.federateTime +", current queue: " + this.queue);
@@ -174,6 +200,9 @@ public class CashRegisterFederate {
         int moveToCashRegisterFromDistributorHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCashRegisterFromDistributor" );
         fedamb.moveToCashRegisterFromDistributorHandle = moveToCashRegisterFromDistributorHandle;
         rtiamb.subscribeInteractionClass( moveToCashRegisterFromDistributorHandle );
+
+        int moveToCarWashHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCarWash" );
+        rtiamb.publishInteractionClass(moveToCarWashHandle);
     }
 
     private void enableTimePolicy() throws RTIexception

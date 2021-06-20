@@ -5,7 +5,8 @@ import java.util.Comparator;
 
 public class ExternalEvent {
 
-    public enum EventType {CREATE_CLIENT, MOVE_TO_CASH_REGISTER_FROM_DISTRIBUTOR, GET}
+    public enum EventType {CREATE_CLIENT, MOVE_TO_CASH_REGISTER_FROM_DISTRIBUTOR, MOVE_TO_CASH_REGISTER_FROM_CAR_WASH,
+        MOVE_TO_CAR_WASH, GET}
 
     private  int id;
     private EventType eventType;
