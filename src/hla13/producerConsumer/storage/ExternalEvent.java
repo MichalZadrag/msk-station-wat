@@ -9,6 +9,8 @@ public class ExternalEvent {
         MOVE_TO_CAR_WASH, GET}
 
     private  int id;
+    private  int amountOfFuel;
+    private String fuelType;
     private EventType eventType;
     private Double time;
 
@@ -17,6 +19,14 @@ public class ExternalEvent {
         this.eventType = eventType;
         this.time = time;
 
+    }
+
+    public ExternalEvent(int id, String fuelType, int amountOfFuel, EventType eventType, Double time) {
+        this.id = id;
+        this.eventType = eventType;
+        this.time = time;
+        this.fuelType = fuelType;
+        this.amountOfFuel = amountOfFuel;
     }
 
     public EventType getEventType() {
@@ -29,6 +39,14 @@ public class ExternalEvent {
 
     public double getTime() {
         return time;
+    }
+
+    public int getAmountOfFuel() {
+        return amountOfFuel;
+    }
+
+    public String getFuelType() {
+        return fuelType;
     }
 
     public static class ExternalEventComparator implements Comparator<ExternalEvent> {

@@ -117,10 +117,14 @@ public class DistributorAmbassador extends NullFederateAmbassador {
         if(interactionClass == createClientHandle) {
             try {
                 int id = EncodingHelpers.decodeInt(theInteraction.getValue(0));
+                int amountOfFuel = EncodingHelpers.decodeInt(theInteraction.getValue(2));
+                String fuelType = EncodingHelpers.decodeString(theInteraction.getValue(1));
                 double time =  convertTime(theTime);
-                externalEvents.add(new ExternalEvent(id, ExternalEvent.EventType.CREATE_CLIENT , time));
+                externalEvents.add(new ExternalEvent(id, fuelType, amountOfFuel, ExternalEvent.EventType.CREATE_CLIENT , time));
                 builder.append("Create Client , time=" + time);
                 builder.append(" id=").append(id);
+                builder.append(" fuelType=").append(fuelType);
+                builder.append(" amountOfFuel=").append(amountOfFuel);
                 builder.append( "\n" );
 
             } catch (ArrayIndexOutOfBounds ignored) {

@@ -66,9 +66,9 @@ public class ClientFederate {
 
         publishAndSubscribe();
 
-        while (fedamb.running) {
+        while (fedamb.running && idCounter < 500) {
             advanceTime(randomTime());
-            sendInteraction(fedamb.federateTime + fedamb.federateLookahead);
+            sendCreateClientInteraction(fedamb.federateTime + fedamb.federateLookahead);
             rtiamb.tick();
         }
 
@@ -109,16 +109,31 @@ public class ClientFederate {
         }
     }
 
-    private void sendInteraction(double timeStep) throws RTIexception {
+    private void sendCreateClientInteraction(double timeStep) throws RTIexception {
         SuppliedParameters parameters =
                 RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
 
+        Random random = new Random();
+
         byte[] id = EncodingHelpers.encodeInt(idCounter++);
+        byte[] fuelType;
+
+        if (random.nextInt(10) >= 4) {
+            fuelType = EncodingHelpers.encodeString("ON");
+        } else {
+            fuelType = EncodingHelpers.encodeString("PETROL");
+        }
+
+        byte[] amountOfFuel = EncodingHelpers.encodeInt(random.nextInt(100));
 
         int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.CreateClient");
         int idHandle = rtiamb.getParameterHandle( "id", interactionHandle );
+        int fuelTypeHandle = rtiamb.getParameterHandle( "fuelType", interactionHandle );
+        int amountOfFuelHandle = rtiamb.getParameterHandle( "amountOfFuel", interactionHandle );
 
         parameters.add(idHandle, id);
+        parameters.add(fuelTypeHandle, fuelType);
+        parameters.add(amountOfFuelHandle, amountOfFuel);
 
         LogicalTime time = convertTime( timeStep );
         rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );

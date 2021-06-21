@@ -16,7 +16,14 @@
       (attribute privilegeToDelete reliable timestamp)
       (class RTIprivate)
       (class Distributor
-        (attribute queue reliable timestamp TestSpace)
+        (attribute queueON reliable timestamp TestSpace)
+        (attribute queueONFedTime reliable timestamp TestSpace)
+        (attribute queueONFuelingTime reliable timestamp TestSpace)
+        (attribute queuePetrol reliable timestamp TestSpace)
+        (attribute queuePetrolFedTime reliable timestamp TestSpace)
+        (attribute queuePetrolFuelingTime reliable timestamp TestSpace)
+        (attribute totalqueueON reliable timestamp TestSpace)
+        (attribute totalqueuePetrol reliable timestamp TestSpace)
       )
       (class CarWash
         (attribute queue reliable timestamp TestSpace)
@@ -32,6 +39,8 @@
       (class Finish reliable timestamp)
       (class CreateClient reliable timestamp TestSpace
         (parameter id)
+        (parameter fuelType)
+        (parameter amountOfFuel)
       )
       (class MoveToCashRegisterFromDistributor reliable timestamp TestSpace
         (parameter id)
