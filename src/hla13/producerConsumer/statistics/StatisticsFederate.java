@@ -101,15 +101,37 @@ public class StatisticsFederate {
 
         // Publkowanie obiektu SimObject z atrybutem state
 
-        int simObjectClassHandle = rtiamb
+        int simObjectClassHandleCashRegister = rtiamb
                 .getObjectClassHandle("ObjectRoot.CashRegister");
-        int stateHandle = rtiamb.getAttributeHandle("queue", simObjectClassHandle);
+        int stateHandleCashRegister = rtiamb.getAttributeHandle("queue", simObjectClassHandleCashRegister);
+        fedamb.queueCashRegisterHandle = stateHandleCashRegister;
 
-        AttributeHandleSet attributes = RtiFactoryFactory.getRtiFactory()
+        int simObjectClassHandleDistributor = rtiamb
+                .getObjectClassHandle("ObjectRoot.Distributor");
+        int stateHandleDistributorON = rtiamb.getAttributeHandle("queueON", simObjectClassHandleDistributor);
+        int stateHandleDistributorPetrol = rtiamb.getAttributeHandle("queuePetrol", simObjectClassHandleDistributor);
+        fedamb.queueONHandle = stateHandleDistributorON;
+
+        int simObjectClassHandleCarWash = rtiamb
+                .getObjectClassHandle("ObjectRoot.CarWash");
+        int stateHandleCarWash = rtiamb.getAttributeHandle("queue", simObjectClassHandleCarWash);
+        fedamb.queueCarWashHandle = stateHandleCarWash;
+
+        AttributeHandleSet attributesCashRegister = RtiFactoryFactory.getRtiFactory()
                 .createAttributeHandleSet();
-        attributes.add(stateHandle);
+        AttributeHandleSet attributesDistributor = RtiFactoryFactory.getRtiFactory()
+                .createAttributeHandleSet();
+        AttributeHandleSet attributesCarWash = RtiFactoryFactory.getRtiFactory()
+                .createAttributeHandleSet();
 
-        rtiamb.subscribeObjectClassAttributes(simObjectClassHandle, attributes);
+        attributesCashRegister.add(stateHandleCashRegister);
+        attributesDistributor.add(stateHandleDistributorON);
+        attributesDistributor.add(stateHandleDistributorPetrol);
+        attributesCarWash.add(stateHandleCarWash);
+
+        rtiamb.subscribeObjectClassAttributes(simObjectClassHandleCashRegister, attributesCashRegister);
+        rtiamb.subscribeObjectClassAttributes(simObjectClassHandleDistributor, attributesDistributor);
+        rtiamb.subscribeObjectClassAttributes(simObjectClassHandleCarWash, attributesCarWash);
 
         int interactionHandle = rtiamb
                 .getInteractionClassHandle("InteractionRoot.Finish");
