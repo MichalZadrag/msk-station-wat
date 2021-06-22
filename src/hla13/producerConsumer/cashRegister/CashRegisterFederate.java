@@ -5,7 +5,6 @@ import hla.rti.*;
 import hla.rti.jlc.EncodingHelpers;
 import hla.rti.jlc.RtiFactoryFactory;
 import hla13.StaticVars;
-import hla13.producerConsumer.distributor.DistributorAmbassador;
 import hla13.producerConsumer.storage.ExternalEvent;
 import org.portico.impl.hla13.types.DoubleTime;
 import org.portico.impl.hla13.types.DoubleTimeInterval;
@@ -76,7 +75,7 @@ public class CashRegisterFederate {
         Random random = new Random();
 
         while (fedamb.running) {
-            double timeToAdvance = fedamb.federateTime + timeStep + ((5 * random.nextDouble()) + 10);
+            double timeToAdvance = fedamb.federateTime + timeStep + ((5 * random.nextDouble()) + 5);
             advanceTime(timeToAdvance);
 
             if(fedamb.externalEvents.size() > 0) {

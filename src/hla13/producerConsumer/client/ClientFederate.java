@@ -161,6 +161,7 @@ public class ClientFederate {
         int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.Finish");
 
         LogicalTime time = convertTime( timeStep );
+        log("Finish Simulation");
         rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );
     }
 

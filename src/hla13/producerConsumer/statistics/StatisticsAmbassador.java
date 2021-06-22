@@ -18,6 +18,7 @@ public class StatisticsAmbassador extends NullFederateAmbassador {
 
     protected boolean isAnnounced        = false;
     protected boolean isReadyToRun       = false;
+    protected int finishHandle       = 0;
 
 
     public void timeRegulationEnabled( LogicalTime theFederateTime )
@@ -69,11 +70,10 @@ public class StatisticsAmbassador extends NullFederateAmbassador {
 			LogicalTime theTime, EventRetractionHandle eventRetractionHandle) {
 		StringBuilder builder = new StringBuilder("Interaction Received: ");
 
-//		if (interactionClass == HandlersHelper
-//				.getInteractionHandleByName("InteractionRoot.Finish")) {
-//			builder.append("Odebrano interakcję kończącą.");
-//			running = false;
-//		}
+		if (interactionClass == finishHandle) {
+			builder.append("Odebrano interakcję kończącą.");
+			running = false;
+		}
 
 		log(builder.toString());
 	}

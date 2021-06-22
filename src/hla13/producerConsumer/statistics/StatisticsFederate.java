@@ -111,14 +111,10 @@ public class StatisticsFederate {
 
         rtiamb.subscribeObjectClassAttributes(simObjectClassHandle, attributes);
 
-        // Zapisanie do inteakcji ko�cz�cej
-//        int interactionHandle = rtiamb
-//                .getInteractionClassHandle("InteractionRoot.Finish");
-        // Dodanie mapowania interakcji na uchwyt
-//		HandlersHelper.addInteractionClassHandler("InteractionRoot.Finish",
-//                interactionHandle);
-
-//        rtiamb.subscribeInteractionClass(interactionHandle);
+        int interactionHandle = rtiamb
+                .getInteractionClassHandle("InteractionRoot.Finish");
+        fedamb.finishHandle = interactionHandle;
+        rtiamb.subscribeInteractionClass(interactionHandle);
     }
 
     private void enableTimePolicy() throws RTIexception {
