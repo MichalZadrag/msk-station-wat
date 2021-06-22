@@ -73,8 +73,10 @@ public class CashRegisterFederate {
 
         registerCashRegisterObject();
 
+        Random random = new Random();
+
         while (fedamb.running) {
-            double timeToAdvance = fedamb.federateTime + timeStep;
+            double timeToAdvance = fedamb.federateTime + timeStep + (20 * random.nextDouble());
             advanceTime(timeToAdvance);
 
             if(fedamb.externalEvents.size() > 0) {
@@ -93,7 +95,7 @@ public class CashRegisterFederate {
                 fedamb.federateTime = timeToAdvance;
             }
 
-            Random random = new Random();
+            random = new Random();
             if (random.nextInt(10) > 7) {
                 sendInteraction(fedamb.federateTime + fedamb.federateLookahead);
             } else {

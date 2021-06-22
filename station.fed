@@ -18,12 +18,8 @@
       (class Distributor
         (attribute queueON reliable timestamp TestSpace)
         (attribute queueONFedTime reliable timestamp TestSpace)
-        (attribute queueONFuelingTime reliable timestamp TestSpace)
         (attribute queuePetrol reliable timestamp TestSpace)
         (attribute queuePetrolFedTime reliable timestamp TestSpace)
-        (attribute queuePetrolFuelingTime reliable timestamp TestSpace)
-        (attribute totalqueueON reliable timestamp TestSpace)
-        (attribute totalqueuePetrol reliable timestamp TestSpace)
       )
       (class CarWash
         (attribute queue reliable timestamp TestSpace)

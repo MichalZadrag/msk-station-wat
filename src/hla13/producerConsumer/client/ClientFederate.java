@@ -66,7 +66,7 @@ public class ClientFederate {
 
         publishAndSubscribe();
 
-        while (fedamb.running && idCounter < 500) {
+        while (fedamb.running && idCounter < 200) {
             advanceTime(randomTime());
             sendCreateClientInteraction(fedamb.federateTime + fedamb.federateLookahead);
             rtiamb.tick();
@@ -124,7 +124,7 @@ public class ClientFederate {
             fuelType = EncodingHelpers.encodeString("PETROL");
         }
 
-        byte[] amountOfFuel = EncodingHelpers.encodeInt(random.nextInt(100));
+        byte[] amountOfFuel = EncodingHelpers.encodeInt(random.nextInt(95) + 5);
 
         int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.CreateClient");
         int idHandle = rtiamb.getParameterHandle( "id", interactionHandle );
@@ -159,7 +159,7 @@ public class ClientFederate {
 
     private double randomTime() {
         Random r = new Random();
-        return 1 +(9 * r.nextDouble());
+        return 1 +(50 * r.nextDouble());
     }
 
     private LogicalTime convertTime( double time )
