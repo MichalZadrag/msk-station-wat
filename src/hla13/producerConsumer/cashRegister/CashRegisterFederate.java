@@ -75,7 +75,7 @@ public class CashRegisterFederate {
         Random random = new Random();
 
         while (fedamb.running) {
-            double timeToAdvance = fedamb.federateTime + timeStep + ((5 * random.nextDouble()) + 5);
+            double timeToAdvance = fedamb.federateTime + timeStep + ((10 * random.nextDouble()) + 2);
             advanceTime(timeToAdvance);
 
             if(fedamb.externalEvents.size() > 0) {
