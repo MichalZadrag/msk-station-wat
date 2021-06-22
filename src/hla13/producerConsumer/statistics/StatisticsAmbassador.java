@@ -1,4 +1,4 @@
-package hla13.statistics;
+package hla13.producerConsumer.statistics;
 
 import hla.rti.*;
 import hla.rti.jlc.EncodingHelpers;
@@ -116,8 +116,8 @@ public class StatisticsAmbassador extends NullFederateAmbassador {
 				builder.append("\tattributeHandle=");
 				builder.append(theAttributes.getAttributeHandle(i));
 				// print the attribute value
-				builder.append(", attributeValue=");
-				builder.append(EncodingHelpers.decodeInt(theAttributes
+				builder.append(", currentQueue=");
+				builder.append(EncodingHelpers.decodeString(theAttributes
                         .getValue(i)));
                 builder.append(", time=");
                 builder.append(theTime);

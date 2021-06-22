@@ -7352,3 +7352,547 @@ org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: Exa
 	at hla13.producerConsumer.cashRegister.CashRegisterFederate.main(CashRegisterFederate.java:252)
 ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashRegisterFederate]: already registered
 ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashRegisterFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:36)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:351)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.carWash.CarWashFederate.runFederate(CarWashFederate.java:33)
+	at hla13.producerConsumer.carWash.CarWashFederate.main(CarWashFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashWashFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashWashFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.runFederate(CashRegisterFederate.java:35)
+	at hla13.producerConsumer.cashRegister.CashRegisterFederate.main(CashRegisterFederate.java:252)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashRegisterFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashRegisterFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:36)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:351)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.client.ClientFederate.runFederate(ClientFederate.java:30)
+	at hla13.producerConsumer.client.ClientFederate.main(ClientFederate.java:187)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [ClientFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [ClientFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.carWash.CarWashFederate.runFederate(CarWashFederate.java:33)
+	at hla13.producerConsumer.carWash.CarWashFederate.main(CarWashFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashWashFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashWashFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:25)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [StatisticsFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [StatisticsFederate]: label already registered
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 1
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:372)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 1
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:372)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 3
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:374)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 1
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:372)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 3
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:374)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 3
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:374)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 1
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:372)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 3
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:374)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 3
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:374)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 1
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:372)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 1
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:372)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 3
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:374)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Exception encountered while processing incoming message: 1
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:372)
+	at hla.rti.jlc.EncodingHelpers.decodeInt(EncodingHelpers.java:356)
+	at hla13.producerConsumer.statistics.StatisticsAmbassador.reflectAttributeValues(StatisticsAmbassador.java:120)
+	at org.portico.impl.hla13.handlers.ReflectAttributesCallbackHandler.process(ReflectAttributesCallbackHandler.java:101)
+	at org.portico.utils.messaging.MessageChain.process(MessageChain.java:78)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.lrc.LRC.tickProcess(LRC.java:641)
+	at org.portico.lrc.LRC.tickUntilEmpty(LRC.java:469)
+	at org.portico.lrc.LRC.tick(LRC.java:433)
+	at org.portico.impl.hla13.Impl13Helper.tick(Impl13Helper.java:130)
+	at org.portico.impl.hla13.Rti13Ambassador.tick(Rti13Ambassador.java:5781)
+	at hla13.producerConsumer.statistics.StatisticsFederate.advanceTime(StatisticsFederate.java:96)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:62)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:36)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:351)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.client.ClientFederate.runFederate(ClientFederate.java:30)
+	at hla13.producerConsumer.client.ClientFederate.main(ClientFederate.java:187)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [ClientFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [ClientFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.carWash.CarWashFederate.runFederate(CarWashFederate.java:33)
+	at hla13.producerConsumer.carWash.CarWashFederate.main(CarWashFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashWashFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashWashFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:25)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [StatisticsFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [StatisticsFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:36)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:351)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.client.ClientFederate.runFederate(ClientFederate.java:30)
+	at hla13.producerConsumer.client.ClientFederate.main(ClientFederate.java:187)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [ClientFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [ClientFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.carWash.CarWashFederate.runFederate(CarWashFederate.java:33)
+	at hla13.producerConsumer.carWash.CarWashFederate.main(CarWashFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashWashFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashWashFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:25)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [StatisticsFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [StatisticsFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:36)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:351)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.client.ClientFederate.runFederate(ClientFederate.java:30)
+	at hla13.producerConsumer.client.ClientFederate.main(ClientFederate.java:187)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [ClientFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [ClientFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.carWash.CarWashFederate.runFederate(CarWashFederate.java:33)
+	at hla13.producerConsumer.carWash.CarWashFederate.main(CarWashFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashWashFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashWashFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:25)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:186)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [StatisticsFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [StatisticsFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:36)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:351)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.client.ClientFederate.runFederate(ClientFederate.java:30)
+	at hla13.producerConsumer.client.ClientFederate.main(ClientFederate.java:187)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [ClientFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [ClientFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.carWash.CarWashFederate.runFederate(CarWashFederate.java:33)
+	at hla13.producerConsumer.carWash.CarWashFederate.main(CarWashFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashWashFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashWashFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:25)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:186)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [StatisticsFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [StatisticsFederate]: label already registered
+ERROR [main] portico.lrc: SUBSCRIBE-OBJECT-DDM: attribute [509] not defined in object class [ObjectRoot.CashRegister]
+org.portico.lrc.compat.JAttributeNotDefined: SUBSCRIBE-OBJECT-DDM: attribute [509] not defined in object class [ObjectRoot.CashRegister]
+	at org.portico.lrc.services.object.data.InterestManager.register(InterestManager.java:158)
+	at org.portico.lrc.services.object.data.InterestManager.subscribeObjectClass(InterestManager.java:732)
+	at org.portico.lrc.services.pubsub.handlers.outgoing.SubscribeObjectClassHandler.process(SubscribeObjectClassHandler.java:112)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.subscribeObjectClassAttributes(Rti13Ambassador.java:1366)
+	at hla13.producerConsumer.statistics.StatisticsFederate.publishAndSubscribe(StatisticsFederate.java:122)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:57)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:186)
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.distributor.DistributorFederate.runFederate(DistributorFederate.java:36)
+	at hla13.producerConsumer.distributor.DistributorFederate.main(DistributorFederate.java:351)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [DistributorFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [DistributorFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.client.ClientFederate.runFederate(ClientFederate.java:30)
+	at hla13.producerConsumer.client.ClientFederate.main(ClientFederate.java:187)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [ClientFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [ClientFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.carWash.CarWashFederate.runFederate(CarWashFederate.java:33)
+	at hla13.producerConsumer.carWash.CarWashFederate.main(CarWashFederate.java:244)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [CashWashFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [CashWashFederate]: label already registered
+ERROR [main] portico.lrc: federation exists: ExampleFederation
+org.portico.lrc.compat.JFederationExecutionAlreadyExists: federation exists: ExampleFederation
+	at org.portico.bindings.jgroups.LrcConnection.createFederation(LrcConnection.java:163)
+	at org.portico.lrc.services.federation.handlers.outgoing.CreateFederationHandler.process(CreateFederationHandler.java:74)
+	at org.portico.utils.messaging.MessageSink.process(MessageSink.java:187)
+	at org.portico.impl.hla13.Impl13Helper.processMessage(Impl13Helper.java:123)
+	at org.portico.impl.hla13.Rti13Ambassador.processMessage(Rti13Ambassador.java:5822)
+	at org.portico.impl.hla13.Rti13Ambassador.createFederationExecution(Rti13Ambassador.java:194)
+	at hla13.producerConsumer.statistics.StatisticsFederate.runFederate(StatisticsFederate.java:25)
+	at hla13.producerConsumer.statistics.StatisticsFederate.main(StatisticsFederate.java:175)
+ERROR [main] portico.lrc: FAILURE Regiser sync point [ReadyToRun] by [StatisticsFederate]: already registered
+ERROR [main] portico.lrc: FAILURE Register sync point [ReadyToRun] by [StatisticsFederate]: label already registered

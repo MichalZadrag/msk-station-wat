@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d5ec905-dd79-4f7e-9ee9-b1adb10d1649" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/portico.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/portico.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorFederate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/station.fed" beforeDir="false" afterPath="$PROJECT_DIR$/station.fed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/portico-producer-consumer-full_2/hla13/producerConsumer/distributor/DistributorFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/portico-producer-consumer-full_2/hla13/producerConsumer/distributor/DistributorFederate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hla13/statistics/StatisticsAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/statistics/StatisticsAmbassador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hla13/statistics/StatisticsFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/statistics/StatisticsFederate.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,83 +15,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/station.fed">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientAmbassador.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorAmbassador.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="92" column="26" lean-forward="true" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/storage/ExternalEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-              <folding>
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#868#869#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorFederate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="182" column="42" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#14093#14094#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -151,6 +72,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectId" id="1uJAPecLhUnLU8E88IIDYmSKDjv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -245,10 +167,17 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
@@ -260,19 +189,7 @@
       <recent name="hla13.producerConsumer.distributor" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.CashRegisterFed">
+  <component name="RunManager" selected="Application.StatisticsFed">
     <configuration name="CarWashFed" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hla13.producerConsumer.carWash.CarWashFederate" />
       <module name="portico-producer-consumer-full_2" />
@@ -294,8 +211,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DistributionFed" type="Application" factoryName="Application">
+    <configuration name="DistributorFed" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hla13.producerConsumer.distributor.DistributorFederate" />
+      <module name="portico-producer-consumer-full_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StatisticsFed" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hla13.producerConsumer.statistics.StatisticsFederate" />
       <module name="portico-producer-consumer-full_2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -308,14 +232,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Application.ClientFed" />
-      <item itemvalue="Application.DistributionFed" />
-      <item itemvalue="Application.CarWashFed" />
+      <item itemvalue="Application.DistributorFed" />
       <item itemvalue="Application.CashRegisterFed" />
+      <item itemvalue="Application.CarWashFed" />
+      <item itemvalue="Application.StatisticsFed" />
     </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -328,6 +265,7 @@
       <updated>1623270118906</updated>
       <workItem from="1623270122389" duration="2069000" />
       <workItem from="1624211317920" duration="28445000" />
+      <workItem from="1624373320745" duration="3896000" />
     </task>
     <servers />
   </component>
@@ -369,21 +307,18 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>jar://$PROJECT_DIR$/lib/portico.jar!/org/portico/impl/hla13/Rti13Ambassador.class</url>
-          <line>2563</line>
-          <properties class="org.portico.impl.hla13.Rti13Ambassador" method="processMessage">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/hla13/Example13Federate.java">
