@@ -71,7 +71,23 @@ public class ClientFederate {
             sendCreateClientInteraction(fedamb.federateTime + fedamb.federateLookahead);
             rtiamb.tick();
         }
-
+        advanceTime(randomTime());
+        sendFinishInteraction(fedamb.federateTime + fedamb.federateLookahead);
+        rtiamb.tick();
+        rtiamb.resignFederationExecution( ResignAction.NO_ACTION );
+        try
+        {
+            rtiamb.destroyFederationExecution( "ExampleFederation" );
+            log( "Destroyed Federation" );
+        }
+        catch( FederationExecutionDoesNotExist dne )
+        {
+            log( "No need to destroy federation, it doesn't exist" );
+        }
+        catch( FederatesCurrentlyJoined fcj )
+        {
+            log( "Didn't destroy federation, federates still joined" );
+        }
     }
 
     private void waitForUser()
@@ -139,9 +155,20 @@ public class ClientFederate {
         rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );
     }
 
+    private void sendFinishInteraction(double timeStep) throws RTIexception {
+        SuppliedParameters parameters =
+                RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
+        int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.Finish");
+
+        LogicalTime time = convertTime( timeStep );
+        rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );
+    }
+
     private void publishAndSubscribe() throws RTIexception {
         int createClientHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.CreateClient" );
         rtiamb.publishInteractionClass(createClientHandle);
+        int finishHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.Finish" );
+        rtiamb.publishInteractionClass(finishHandle);
     }
 
     private void advanceTime( double timestep ) throws RTIexception
@@ -159,7 +186,7 @@ public class ClientFederate {
 
     private double randomTime() {
         Random r = new Random();
-        return 1 +(50 * r.nextDouble());
+        return 1 +(40 * r.nextDouble());
     }
 
     private LogicalTime convertTime( double time )
@@ -179,7 +206,7 @@ public class ClientFederate {
 
     private void log( String message )
     {
-        System.out.println( "CashRegisterFederate   : " + message );
+        System.out.println( "ClientFederate   : " + message );
     }
 
     public static void main(String[] args) {

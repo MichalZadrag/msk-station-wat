@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9d5ec905-dd79-4f7e-9ee9-b1adb10d1649" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/logs/portico.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/portico.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashAmbassador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashFederate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterAmbassador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorAmbassador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorFederate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/station.fed" beforeDir="false" afterPath="$PROJECT_DIR$/station.fed" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,72 +26,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/station.fed">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="289">
               <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java">
+        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterAmbassador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+            <state relative-caret-position="136">
+              <caret line="36" column="48" lean-forward="true" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientAmbassador.java">
+        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashFederate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="256">
+              <caret line="224" column="8" selection-start-line="224" selection-start-column="8" selection-end-line="226" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorAmbassador.java">
+        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashAmbassador.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="92" column="26" lean-forward="true" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/storage/ExternalEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-              <folding>
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#868#869#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="293">
+              <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorFederate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="182" column="42" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#14093#14094#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="270">
+              <caret line="237" column="55" selection-start-line="237" selection-start-column="55" selection-end-line="237" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -110,6 +85,10 @@
       <find>Federate</find>
       <find>dis</find>
       <find>grantedTime</find>
+      <find>registe</find>
+      <find>rtiamb</find>
+      <find>regis</find>
+      <find>regi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,15 +112,15 @@
         <option value="$PROJECT_DIR$/src/hla13/statistics/StatisticsAmbassador.java" />
         <option value="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/DistributorAmbassador.java" />
         <option value="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/DistributorFederate.java" />
-        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterAmbassador.java" />
-        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashAmbassador.java" />
-        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashFederate.java" />
         <option value="$PROJECT_DIR$/src/hla13/producerConsumer/storage/ExternalEvent.java" />
-        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorAmbassador.java" />
-        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java" />
-        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java" />
         <option value="$PROJECT_DIR$/station.fed" />
+        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorAmbassador.java" />
         <option value="$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorFederate.java" />
+        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java" />
+        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashFederate.java" />
+        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterAmbassador.java" />
+        <option value="$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java" />
       </list>
     </option>
   </component>
@@ -327,12 +306,12 @@
       <option name="presentableId" value="Default" />
       <updated>1623270118906</updated>
       <workItem from="1623270122389" duration="2069000" />
-      <workItem from="1624211317920" duration="28445000" />
+      <workItem from="1624211317920" duration="34514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30514000" />
+    <option name="totallyTimeSpent" value="36583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -346,7 +325,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3502455" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34042552" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -421,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/storage/StorageFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hla13/statistics/StatisticsFederate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -460,50 +432,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterAmbassador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testfom.fed">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashAmbassador.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="119" column="52" lean-forward="true" selection-start-line="119" selection-start-column="52" selection-end-line="119" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/consumer/ConsumerFederate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/storage/ExternalEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding>
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_152/src.zip!/java/io/FileInputStream.java">
@@ -548,17 +479,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java">
+    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/storage/StorageFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="108">
+          <caret line="227" column="37" selection-start-line="227" selection-start-column="33" selection-end-line="227" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java">
+    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/storage/ExternalEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        <state relative-caret-position="221">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding>
+            <element signature="e#767#768#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -569,28 +506,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorAmbassador.java">
+    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/consumer/ConsumerFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="92" column="26" lean-forward="true" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+        <state relative-caret-position="154">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/client/ClientFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/station.fed">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="289">
           <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorFederate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="182" column="42" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
+        <state relative-caret-position="187">
+          <caret line="323" column="8" lean-forward="true" selection-start-line="323" selection-start-column="8" selection-end-line="325" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#14093#14094#0" expanded="true" />
+            <element signature="e#14728#14729#0" expanded="true" />
+            <element signature="e#14802#14803#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/distributor/DistributorAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="135" column="9" lean-forward="true" selection-start-line="133" selection-start-column="10" selection-end-line="135" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterAmbassador.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="36" column="48" lean-forward="true" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/carWash/CarWashFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="224" column="8" selection-start-line="224" selection-start-column="8" selection-end-line="226" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hla13/producerConsumer/cashRegister/CashRegisterFederate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="237" column="55" selection-start-line="237" selection-start-column="55" selection-end-line="237" selection-end-column="55" />
         </state>
       </provider>
     </entry>

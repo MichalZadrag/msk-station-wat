@@ -76,7 +76,7 @@ public class CashRegisterFederate {
         Random random = new Random();
 
         while (fedamb.running) {
-            double timeToAdvance = fedamb.federateTime + timeStep + (20 * random.nextDouble());
+            double timeToAdvance = fedamb.federateTime + timeStep + ((5 * random.nextDouble()) + 10);
             advanceTime(timeToAdvance);
 
             if(fedamb.externalEvents.size() > 0) {
@@ -96,30 +96,60 @@ public class CashRegisterFederate {
             }
 
             random = new Random();
-            if (random.nextInt(10) > 7) {
-                sendInteraction(fedamb.federateTime + fedamb.federateLookahead);
+            if (random.nextInt(10) > 6) {
+                sendMoveToCarWashInteraction(fedamb.federateTime + fedamb.federateLookahead);
             } else {
-                System.out.println("Opuszcza kolejkę " + getFromQueue());
+                sendGoOutInteraction(fedamb.federateTime + fedamb.federateLookahead);
             }
 
             rtiamb.tick();
         }
 
+        deleteObject(this.cashRegisterHlaHandle);
+        try
+        {
+            rtiamb.destroyFederationExecution( "ExampleFederation" );
+            log( "Destroyed Federation" );
+        }
+        catch( FederationExecutionDoesNotExist dne )
+        {
+            log( "No need to destroy federation, it doesn't exist" );
+        }
+        catch( FederatesCurrentlyJoined fcj )
+        {
+            log( "Didn't destroy federation, federates still joined" );
+        }
     }
 
-    private void sendInteraction(double timeStep) throws RTIexception {
+    private void deleteObject( int handle ) throws RTIexception
+    {
+        rtiamb.deleteObjectInstance(handle, (""+System.currentTimeMillis()).getBytes());
+    }
+
+    private void sendMoveToCarWashInteraction(double timeStep) throws RTIexception {
         SuppliedParameters parameters =
                 RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
 
-        byte[] id = EncodingHelpers.encodeInt(getFromQueue());
 
-        int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.MoveToCarWash");
-        int idHandle = rtiamb.getParameterHandle( "id", interactionHandle );
+        int id = getFromQueue();
+        if (id != -1) {
+            byte[] idByte = EncodingHelpers.encodeInt(id);
 
-        parameters.add(idHandle, id);
+            int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.MoveToCarWash");
+            int idHandle = rtiamb.getParameterHandle( "id", interactionHandle );
 
-        LogicalTime time = convertTime( timeStep );
-        rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );
+            parameters.add(idHandle, idByte);
+
+            LogicalTime time = convertTime( timeStep );
+            rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );
+        }
+    }
+
+    private void sendGoOutInteraction(double timeStep) throws RTIexception {
+        int id = getFromQueue();
+        if (id != -1) {
+            System.out.println("Opuszcza kolejkę " + id);
+        }
     }
 
     public void addToQueue(int id) {
@@ -202,6 +232,10 @@ public class CashRegisterFederate {
         int moveToCashRegisterFromDistributorHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCashRegisterFromDistributor" );
         fedamb.moveToCashRegisterFromDistributorHandle = moveToCashRegisterFromDistributorHandle;
         rtiamb.subscribeInteractionClass( moveToCashRegisterFromDistributorHandle );
+
+        int finishHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.Finish" );
+        fedamb.finishHandle = finishHandle;
+        rtiamb.subscribeInteractionClass(finishHandle);
 
         int moveToCarWashHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCarWash" );
         rtiamb.publishInteractionClass(moveToCarWashHandle);

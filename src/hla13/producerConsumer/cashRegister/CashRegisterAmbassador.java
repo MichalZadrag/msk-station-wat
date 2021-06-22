@@ -36,6 +36,7 @@ public class CashRegisterAmbassador extends NullFederateAmbassador {
 
     protected boolean running 			 = true;
     protected int moveToCashRegisterFromDistributorHandle = 0;
+    protected int finishHandle = 0;
 
     protected ArrayList<ExternalEvent> externalEvents = new ArrayList<>();
 
@@ -126,6 +127,8 @@ public class CashRegisterAmbassador extends NullFederateAmbassador {
             } catch (ArrayIndexOutOfBounds ignored) {
 
             }
+        } else if (interactionClass == finishHandle) {
+            this.running = false;
         }
 
         log( builder.toString() );

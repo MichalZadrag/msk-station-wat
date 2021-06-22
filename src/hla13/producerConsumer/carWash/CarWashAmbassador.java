@@ -36,6 +36,7 @@ public class CarWashAmbassador extends NullFederateAmbassador {
 
     protected boolean running 			 = true;
     protected int moveToCarWashHandle = 0;
+    protected int finishHandle = 0;
 
     protected ArrayList<ExternalEvent> externalEvents = new ArrayList<>();
 
@@ -126,6 +127,8 @@ public class CarWashAmbassador extends NullFederateAmbassador {
             } catch (ArrayIndexOutOfBounds ignored) {
 
             }
+        } else if (interactionClass == finishHandle) {
+            this.running = false;
         }
 
         log( builder.toString() );

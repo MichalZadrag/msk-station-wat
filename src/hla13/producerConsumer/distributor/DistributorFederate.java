@@ -98,6 +98,21 @@ public class DistributorFederate {
 
             rtiamb.tick();
         }
+        deleteObject(this.distributorHlaHandle);
+        rtiamb.resignFederationExecution( ResignAction.NO_ACTION );
+        try
+        {
+            rtiamb.destroyFederationExecution( "ExampleFederation" );
+            log( "Destroyed Federation" );
+        }
+        catch( FederationExecutionDoesNotExist dne )
+        {
+            log( "No need to destroy federation, it doesn't exist" );
+        }
+        catch( FederatesCurrentlyJoined fcj )
+        {
+            log( "Didn't destroy federation, federates still joined" );
+        }
 
     }
 
@@ -174,6 +189,11 @@ public class DistributorFederate {
             default:
                 break;
         }
+    }
+
+    private void deleteObject( int handle ) throws RTIexception
+    {
+        rtiamb.deleteObjectInstance(handle, (""+System.currentTimeMillis()).getBytes());
     }
 
     private String[] tryGetFromQueueON(double fedTime) {
@@ -301,6 +321,9 @@ public class DistributorFederate {
         int createClientHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.CreateClient" );
         fedamb.createClientHandle = createClientHandle;
         rtiamb.subscribeInteractionClass( createClientHandle );
+        int finishHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.Finish" );
+        fedamb.finishHandle = finishHandle;
+        rtiamb.subscribeInteractionClass(finishHandle);
 
         int moveToCashRegisterFromDistributorHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCashRegisterFromDistributor" );
         rtiamb.publishInteractionClass(moveToCashRegisterFromDistributorHandle);
