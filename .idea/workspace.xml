@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9d5ec905-dd79-4f7e-9ee9-b1adb10d1649" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/portico.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/portico.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/portico-producer-consumer-full_2/hla13/producerConsumer/distributor/DistributorFederate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/portico-producer-consumer-full_2/hla13/producerConsumer/distributor/DistributorFederate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hla13/statistics/StatisticsAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/statistics/StatisticsAmbassador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hla13/statistics/StatisticsFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/statistics/StatisticsFederate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +176,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
   </component>
   <component name="RecentsManager">
@@ -265,7 +262,7 @@
       <updated>1623270118906</updated>
       <workItem from="1623270122389" duration="2069000" />
       <workItem from="1624211317920" duration="28445000" />
-      <workItem from="1624373320745" duration="3896000" />
+      <workItem from="1624373320745" duration="4445000" />
     </task>
     <servers />
   </component>
