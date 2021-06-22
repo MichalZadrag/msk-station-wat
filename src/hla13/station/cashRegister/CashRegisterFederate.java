@@ -5,7 +5,7 @@ import hla.rti.*;
 import hla.rti.jlc.EncodingHelpers;
 import hla.rti.jlc.RtiFactoryFactory;
 import hla13.StaticVars;
-import hla13.station.storage.ExternalEvent;
+import hla13.station.ExternalEvent;
 import org.portico.impl.hla13.types.DoubleTime;
 import org.portico.impl.hla13.types.DoubleTimeInterval;
 
