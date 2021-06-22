@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d5ec905-dd79-4f7e-9ee9-b1adb10d1649" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/statistics/StatisticsAmbassador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/statistics/StatisticsAmbassador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hla13/producerConsumer/statistics/StatisticsFederate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hla13/producerConsumer/statistics/StatisticsFederate.java" afterDir="false" />
-    </list>
+    <list default="true" id="9d5ec905-dd79-4f7e-9ee9-b1adb10d1649" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -292,28 +289,28 @@
   </component>
   <component name="RunManager" selected="Application.CashRegisterFed">
     <configuration name="CarWashFed" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hla13.producerConsumer.carWash.CarWashFederate" />
+      <option name="MAIN_CLASS_NAME" value="hla13.station.carWash.CarWashFederate" />
       <module name="portico-producer-consumer-full_2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="CashRegisterFed" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hla13.producerConsumer.cashRegister.CashRegisterFederate" />
+      <option name="MAIN_CLASS_NAME" value="hla13.station.cashRegister.CashRegisterFederate" />
       <module name="portico-producer-consumer-full_2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ClientFed" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hla13.producerConsumer.client.ClientFederate" />
+      <option name="MAIN_CLASS_NAME" value="hla13.station.client.ClientFederate" />
       <module name="portico-producer-consumer-full_2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="DistributionFed" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hla13.producerConsumer.distributor.DistributorFederate" />
+      <option name="MAIN_CLASS_NAME" value="hla13.station.distributor.DistributorFederate" />
       <module name="portico-producer-consumer-full_2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -350,7 +347,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38674000" />
+    <option name="totallyTimeSpent" value="38974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />

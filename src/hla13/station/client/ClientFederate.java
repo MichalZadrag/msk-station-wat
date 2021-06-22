@@ -1,4 +1,5 @@
-package hla13.producerConsumer.consumer;
+package hla13.station.client;
+
 
 import hla.rti.*;
 import hla.rti.jlc.EncodingHelpers;
@@ -13,23 +14,19 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.util.Random;
 
-/**
- * Created by Michal on 2016-04-27.
- */
-public class ConsumerFederate {
-
-    public static final String READY_TO_RUN = "ReadyToRun";
+public class ClientFederate {
 
     private RTIambassador rtiamb;
-    private ConsumerAmbassador fedamb;
+    private ClientAmbassador fedamb;
     private final double timeStep           = 10.0;
+    private int idCounter = 0;
 
-    public void runFederate() throws RTIexception {
+    public void runFederate() throws RTIexception{
         rtiamb = RtiFactoryFactory.getRtiFactory().createRtiAmbassador();
 
         try
         {
-            File fom = new File( "client-consumer.fed" );
+            File fom = new File( "station.fed" );
             rtiamb.createFederationExecution( "ExampleFederation",
                     fom.toURI().toURL() );
             log( "Created Federation" );
@@ -45,8 +42,8 @@ public class ConsumerFederate {
             return;
         }
 
-        fedamb = new ConsumerAmbassador();
-        rtiamb.joinFederationExecution( "ConsumerFederate", "ExampleFederation", fedamb );
+        fedamb = new ClientAmbassador();
+        rtiamb.joinFederationExecution( "ClientFederate", "ExampleFederation", fedamb );
         log( "Joined Federation as ClientFederate");
 
         rtiamb.registerFederationSynchronizationPoint( StaticVars.READY_TO_RUN, null );
@@ -69,12 +66,28 @@ public class ConsumerFederate {
 
         publishAndSubscribe();
 
-        while (fedamb.running) {
+        while (fedamb.running && idCounter < 200) {
             advanceTime(randomTime());
-            sendInteraction(fedamb.federateTime + fedamb.federateLookahead);
+            sendCreateClientInteraction(fedamb.federateTime + fedamb.federateLookahead);
             rtiamb.tick();
         }
-
+        advanceTime(randomTime());
+        sendFinishInteraction(fedamb.federateTime + fedamb.federateLookahead);
+        rtiamb.tick();
+        rtiamb.resignFederationExecution( ResignAction.NO_ACTION );
+        try
+        {
+            rtiamb.destroyFederationExecution( "ExampleFederation" );
+            log( "Destroyed Federation" );
+        }
+        catch( FederationExecutionDoesNotExist dne )
+        {
+            log( "No need to destroy federation, it doesn't exist" );
+        }
+        catch( FederatesCurrentlyJoined fcj )
+        {
+            log( "Didn't destroy federation, federates still joined" );
+        }
     }
 
     private void waitForUser()
@@ -112,29 +125,51 @@ public class ConsumerFederate {
         }
     }
 
-    private void sendInteraction(double timeStep) throws RTIexception {
+    private void sendCreateClientInteraction(double timeStep) throws RTIexception {
         SuppliedParameters parameters =
                 RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
+
         Random random = new Random();
-        int quantityInt = random.nextInt(10) + 1;
-        byte[] quantity = EncodingHelpers.encodeInt(quantityInt);
 
-        int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.GetProduct");
-        int quantityHandle = rtiamb.getParameterHandle( "quantity", interactionHandle );
+        byte[] id = EncodingHelpers.encodeInt(idCounter++);
+        byte[] fuelType;
 
-        parameters.add(quantityHandle, quantity);
+        if (random.nextInt(10) >= 4) {
+            fuelType = EncodingHelpers.encodeString("ON");
+        } else {
+            fuelType = EncodingHelpers.encodeString("PETROL");
+        }
+
+        byte[] amountOfFuel = EncodingHelpers.encodeInt(random.nextInt(95) + 5);
+
+        int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.CreateClient");
+        int idHandle = rtiamb.getParameterHandle( "id", interactionHandle );
+        int fuelTypeHandle = rtiamb.getParameterHandle( "fuelType", interactionHandle );
+        int amountOfFuelHandle = rtiamb.getParameterHandle( "amountOfFuel", interactionHandle );
+
+        parameters.add(idHandle, id);
+        parameters.add(fuelTypeHandle, fuelType);
+        parameters.add(amountOfFuelHandle, amountOfFuel);
 
         LogicalTime time = convertTime( timeStep );
-        log("Sending GetProduct: " + quantityInt);
-        // TSO
         rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );
-//        // RO
-//        rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes() );
+    }
+
+    private void sendFinishInteraction(double timeStep) throws RTIexception {
+        SuppliedParameters parameters =
+                RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
+        int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.Finish");
+
+        LogicalTime time = convertTime( timeStep );
+        log("Finish Simulation");
+        rtiamb.sendInteraction( interactionHandle, parameters, "tag".getBytes(), time );
     }
 
     private void publishAndSubscribe() throws RTIexception {
-        int addProductHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.GetProduct" );
-        rtiamb.publishInteractionClass(addProductHandle);
+        int createClientHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.CreateClient" );
+        rtiamb.publishInteractionClass(createClientHandle);
+        int finishHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.Finish" );
+        rtiamb.publishInteractionClass(finishHandle);
     }
 
     private void advanceTime( double timestep ) throws RTIexception
@@ -152,7 +187,7 @@ public class ConsumerFederate {
 
     private double randomTime() {
         Random r = new Random();
-        return 1 +(4 * r.nextDouble());
+        return 1 +(40 * r.nextDouble());
     }
 
     private LogicalTime convertTime( double time )
@@ -172,16 +207,15 @@ public class ConsumerFederate {
 
     private void log( String message )
     {
-        System.out.println( "CashRegisterFederate   : " + message );
+        System.out.println( "ClientFederate   : " + message );
     }
 
     public static void main(String[] args) {
         try {
-            new ConsumerFederate().runFederate();
+            new ClientFederate().runFederate();
         } catch (RTIexception rtIexception) {
             rtIexception.printStackTrace();
         }
     }
-
 
 }

@@ -1,4 +1,4 @@
-package hla13.producerConsumer.client;
+package hla13.station.client;
 
 import hla.rti.LogicalTime;
 import hla.rti.jlc.NullFederateAmbassador;

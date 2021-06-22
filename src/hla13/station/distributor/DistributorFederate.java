@@ -1,11 +1,11 @@
-package hla13.producerConsumer.distributor;
+package hla13.station.distributor;
 
 
 import hla.rti.*;
 import hla.rti.jlc.EncodingHelpers;
 import hla.rti.jlc.RtiFactoryFactory;
 import hla13.StaticVars;
-import hla13.producerConsumer.storage.ExternalEvent;
+import hla13.station.storage.ExternalEvent;
 import org.portico.impl.hla13.types.DoubleTime;
 import org.portico.impl.hla13.types.DoubleTimeInterval;
 

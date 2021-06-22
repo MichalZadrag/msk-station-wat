@@ -1,4 +1,4 @@
-package hla13.producerConsumer.statistics;
+package hla13.station.statistics;
 
 import hla.rti.*;
 import hla.rti.jlc.EncodingHelpers;

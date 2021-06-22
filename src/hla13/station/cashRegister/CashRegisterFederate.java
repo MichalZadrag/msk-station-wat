@@ -1,11 +1,11 @@
-package hla13.producerConsumer.carWash;
+package hla13.station.cashRegister;
 
 
 import hla.rti.*;
 import hla.rti.jlc.EncodingHelpers;
 import hla.rti.jlc.RtiFactoryFactory;
 import hla13.StaticVars;
-import hla13.producerConsumer.storage.ExternalEvent;
+import hla13.station.storage.ExternalEvent;
 import org.portico.impl.hla13.types.DoubleTime;
 import org.portico.impl.hla13.types.DoubleTimeInterval;
 
@@ -15,13 +15,13 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.util.Random;
 
-public class CarWashFederate {
+public class CashRegisterFederate {
 
     private RTIambassador rtiamb;
-    private CarWashAmbassador fedamb;
+    private CashRegisterAmbassador fedamb;
     private final double timeStep           = 10.0;
     private String queue = "";
-    private int carWashHlaHandle;
+    private int cashRegisterHlaHandle;
 
 
     public void runFederate() throws Exception {
@@ -46,9 +46,9 @@ public class CarWashFederate {
             return;
         }
 
-        fedamb = new CarWashAmbassador();
-        rtiamb.joinFederationExecution( "CashWashFederate", "ExampleFederation", fedamb );
-        log( "Joined Federation as CarWashFederate");
+        fedamb = new CashRegisterAmbassador();
+        rtiamb.joinFederationExecution( "CashRegisterFederate", "ExampleFederation", fedamb );
+        log( "Joined Federation as CashRegisterFederate");
 
         rtiamb.registerFederationSynchronizationPoint( StaticVars.READY_TO_RUN, null );
 
@@ -70,12 +70,12 @@ public class CarWashFederate {
 
         publishAndSubscribe();
 
-        registerCarWashObject();
+        registerCashRegisterObject();
 
         Random random = new Random();
 
         while (fedamb.running) {
-            double timeToAdvance = fedamb.federateTime + timeStep + ((50 * random.nextDouble()) + 10);
+            double timeToAdvance = fedamb.federateTime + timeStep + ((10 * random.nextDouble()) + 2);
             advanceTime(timeToAdvance);
 
             if(fedamb.externalEvents.size() > 0) {
@@ -94,13 +94,17 @@ public class CarWashFederate {
                 fedamb.federateTime = timeToAdvance;
             }
 
-            sendMoveToCashRegisterInteraction(fedamb.federateTime + fedamb.federateLookahead);
+            random = new Random();
+            if (random.nextInt(10) > 6) {
+                sendMoveToCarWashInteraction(fedamb.federateTime + fedamb.federateLookahead);
+            } else {
+                sendGoOutInteraction(fedamb.federateTime + fedamb.federateLookahead);
+            }
 
             rtiamb.tick();
         }
 
-        deleteObject(this.carWashHlaHandle);
-        rtiamb.resignFederationExecution( ResignAction.NO_ACTION );
+        deleteObject(this.cashRegisterHlaHandle);
         try
         {
             rtiamb.destroyFederationExecution( "ExampleFederation" );
@@ -114,7 +118,6 @@ public class CarWashFederate {
         {
             log( "Didn't destroy federation, federates still joined" );
         }
-
     }
 
     private void deleteObject( int handle ) throws RTIexception
@@ -122,15 +125,16 @@ public class CarWashFederate {
         rtiamb.deleteObjectInstance(handle, (""+System.currentTimeMillis()).getBytes());
     }
 
-    private void sendMoveToCashRegisterInteraction(double timeStep) throws RTIexception {
+    private void sendMoveToCarWashInteraction(double timeStep) throws RTIexception {
         SuppliedParameters parameters =
                 RtiFactoryFactory.getRtiFactory().createSuppliedParameters();
+
 
         int id = getFromQueue();
         if (id != -1) {
             byte[] idByte = EncodingHelpers.encodeInt(id);
 
-            int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.MoveToCashRegisterFromCarWash");
+            int interactionHandle = rtiamb.getInteractionClassHandle("InteractionRoot.MoveToCarWash");
             int idHandle = rtiamb.getParameterHandle( "id", interactionHandle );
 
             parameters.add(idHandle, idByte);
@@ -140,13 +144,19 @@ public class CarWashFederate {
         }
     }
 
+    private void sendGoOutInteraction(double timeStep) throws RTIexception {
+        int id = getFromQueue();
+        if (id != -1) {
+            System.out.println("Opuszcza kolejkę " + id);
+        }
+    }
+
     public void addToQueue(int id) {
         this.queue += "#" + id;
         log("Added "+id + " at time: "+ fedamb.federateTime +", current queue: " + this.queue);
     }
 
     private int getFromQueue() {
-
         if(this.queue.split("#").length == 1) {
             log("Empty queue");
         } else if (this.queue.split("#").length == 2) {
@@ -178,22 +188,22 @@ public class CarWashFederate {
         }
     }
 
-    private void registerCarWashObject() throws RTIexception {
-        int classHandle = rtiamb.getObjectClassHandle("ObjectRoot.CarWash");
-        this.carWashHlaHandle = rtiamb.registerObjectInstance(classHandle);
+    private void registerCashRegisterObject() throws RTIexception {
+        int classHandle = rtiamb.getObjectClassHandle("ObjectRoot.CashRegister");
+        this.cashRegisterHlaHandle = rtiamb.registerObjectInstance(classHandle);
     }
 
     private void updateHLAObject(double time) throws RTIexception{
         SuppliedAttributes attributes =
                 RtiFactoryFactory.getRtiFactory().createSuppliedAttributes();
 
-        int classHandle = rtiamb.getObjectClass(carWashHlaHandle);
+        int classHandle = rtiamb.getObjectClass(cashRegisterHlaHandle);
         int queueHandle = rtiamb.getAttributeHandle( "queue", classHandle );
         byte[] queueValue = EncodingHelpers.encodeString(queue);
 
         attributes.add(queueHandle, queueValue);
         LogicalTime logicalTime = convertTime( time );
-        rtiamb.updateAttributeValues( carWashHlaHandle, attributes, "actualize queue".getBytes(), logicalTime );
+        rtiamb.updateAttributeValues( cashRegisterHlaHandle, attributes, "actualize queue".getBytes(), logicalTime );
     }
 
     private void advanceTime( double timeToAdvance ) throws RTIexception {
@@ -209,7 +219,7 @@ public class CarWashFederate {
 
     private void publishAndSubscribe() throws RTIexception {
 
-        int classHandle = rtiamb.getObjectClassHandle("ObjectRoot.CarWash");
+        int classHandle = rtiamb.getObjectClassHandle("ObjectRoot.CashRegister");
         int queueHandle    = rtiamb.getAttributeHandle( "queue", classHandle );
 
         AttributeHandleSet attributes =
@@ -218,16 +228,16 @@ public class CarWashFederate {
 
         rtiamb.publishObjectClass(classHandle, attributes);
 
-        int moveToCarWashHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCarWash" );
-        fedamb.moveToCarWashHandle = moveToCarWashHandle;
-        rtiamb.subscribeInteractionClass( moveToCarWashHandle );
+        int moveToCashRegisterFromDistributorHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCashRegisterFromDistributor" );
+        fedamb.moveToCashRegisterFromDistributorHandle = moveToCashRegisterFromDistributorHandle;
+        rtiamb.subscribeInteractionClass( moveToCashRegisterFromDistributorHandle );
 
         int finishHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.Finish" );
         fedamb.finishHandle = finishHandle;
         rtiamb.subscribeInteractionClass(finishHandle);
 
-        int moveToCashRegisterFromCarWashHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCashRegisterFromCarWash" );
-        rtiamb.publishInteractionClass(moveToCashRegisterFromCarWashHandle);
+        int moveToCarWashHandle = rtiamb.getInteractionClassHandle( "InteractionRoot.MoveToCarWash" );
+        rtiamb.publishInteractionClass(moveToCarWashHandle);
     }
 
     private void enableTimePolicy() throws RTIexception
@@ -267,12 +277,12 @@ public class CarWashFederate {
 
     private void log( String message )
     {
-        System.out.println( "CarWashFederate   : " + message );
+        System.out.println( "CashRegisterFederate   : " + message );
     }
 
     public static void main(String[] args) {
         try {
-            new CarWashFederate().runFederate();
+            new CashRegisterFederate().runFederate();
         } catch (Exception e) {
             e.printStackTrace();
         }
